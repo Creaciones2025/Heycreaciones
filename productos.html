@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Imagenes HeyFlores.jpg/Logo HD.jpg">
+    <title>Hey Flores</title>
+</head>
+<body>
+    
+    <div class="logo">
+        <img src="Imagenes HeyFlores.jpg/Logo HD-Photoroom.png" alt="Logo de la tienda">
+    </div>
+    </div>
+
+<header class="header">
+    <div class="container">
+        <div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="navbar">
+            <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Quienes Somos.html">¿Quienes somos?</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+            <!-- Carrito de compras -->
+            <div class="cart-icon" onclick="toggleCart()">
+                <img src="Imagenes HeyFlores.jpg/Carrito1-Photoroom.png" alt="Carrito" style="width: 35px; height: 35px;">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de búsqueda de productos -->
+    <section class="search">
+        <div class="container">
+            <input type="text" placeholder="Buscar productos..." class="search-input" id="search-input" oninput="searchProducts()">
+        </div>
+    </section>
+
+    <!-- Listado de productos -->
+    <section class="productos container">
+        <h2>Productos</h2>
+        <div class="product-grid" id="search-results">
+            <div class="product">
+
+                <img src="Imagenes HeyFlores.jpg/11.jpg" alt="Ramo de Rosas" onclick="showDetails('Ramo de Rosas', 'Hermoso ramo de rosas rojas, ideal para cualquier ocasión especial.', 25)">
+                <h3>Ramo de Rosas</h3>
+                <p class="price">$25.00</p>
+                <button onclick="addToCart('Ramo de Rosas', 25)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/12.jpg" alt="Ramo de Lirios" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de Lirios</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de Lirios', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/13.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de space', 'Hermoso ramo de space para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de space', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/1.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/2.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/3.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/4.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/5.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/6.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/7.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/8.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="Imagenes HeyFlores.jpg/9.jpg" alt="Ramo de rick" onclick="showDetails('Ramo de Lirios', 'Hermoso ramo de lirios para alegrar tu día.', 30)">
+                <h3>Ramo de space</h3>
+                <p class="price">$30.00</p>
+                <button onclick="addToCart('Ramo de morty', 30)">Añadir al carrito</button>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Modal para mostrar detalles del producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+        </div>
+    </div>
+
+    <!-- Modal del carrito de compras -->
+    <div id="cart-modal" class="cart-modal">
+        <span class="close-btn" onclick="toggleCart()">×</span>
+        <ul id="cart-items">
+            <!-- Los artículos del carrito se agregarán aquí dinámicamente -->
+        </ul>
+        <p>Total: <span id="cart-total">$0.00</span></p>
+    </div>
+
+    <!-- Paginación -->
+    <section class="paginacion">
+        <ul>
+            <li><a href="productos.html" class="active">Inicio</a></li>
+            <li><a href="Pagina 1.html">1</a></li>
+            <li><a href="Pagina 2.html">2</a></li>
+
+
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social">
+                <a href="https://www.instagram.com/floresheyve" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <p>Síguenos en Instagram</p>
+            </div>
+            <p>&copy; 2024 Hey flores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
